@@ -1,0 +1,194 @@
+:root {
+    --color-primary: #205c43;
+    --color-background: #f5f7f4;
+    --color-text: #24332b;
+    --spacing-base: 1rem;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial,sans-serif;
+    line-height: 1.6;
+    color: var(--color-text);
+    background-color: var(--color-background);
+}
+
+.site-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-base);
+    padding: 1.5rem 1rem;
+    background-color: var(--color-primary);
+}
+
+.site-header__brand {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.site-nav__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.site-nav__list a {
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.75rem;
+}
+
+.site-nav__list a:focus-visible,
+.site-header__brand:focus-visible {
+    outline: 3px solid #ffdf70;
+    outline-offset: 4px;
+}
+
+main > section {
+    padding: 3rem 1rem;
+}
+
+main > section > h2 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+main > h1, main > p {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-align: center;
+}
+
+#about > p {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.trail-card {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    border: 1px solid #dce5dc;
+    height: 100%;
+}
+
+.trail-card__image {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 8 / 5;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+.contact-form {
+    display: grid;
+    gap: 1.25rem;
+    max-width: 650px;
+    margin-inline: auto;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #819389;
+    border-radius: 0.5rem;
+    font: inherit;
+}
+
+.contact-form button {
+    padding: 0.875rem 1.5rem;
+    background-color: var(--color-primary);
+    color: white;
+    border: 0;
+    border-radius: 0.5rem;
+    font: inherit;
+    cursor: pointer;
+}
+
+.contact-form input:focus, 
+.contact-form textarea:focus,
+.contact-form button:focus-visible {
+    outline: 3px solid #ffdf70;
+    outline-offset: 2px;
+}
+
+#contact > p {
+    text-align: center;
+}
+
+#faq details {
+    max-width: 850px;
+    margin: 0 auto 1rem;
+    padding: 1rem;
+    background-color: white;
+    border: 1px solid #dce5dc;
+    border-radius: 0.5rem;
+}
+
+#faq summary {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#faq > h3 {
+    max-width: 850px;
+    margin: 2rem auto 1rem;
+    text-align: center;
+}
+
+footer {
+    padding: 2rem 1rem;
+    background-color: var(--color-primary);
+    color: white;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .site-header {
+        flex-direction: row;                         
+        justify-content: space-between;
+        padding: 1.5rem 2rem;
+    }
+
+    .site-nav__list {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+@media (min-width: 1200px) {
+    .trail-card {
+        padding: 2rem;
+    }
+
+    .trail-card h3 {
+        font-size: 1.5rem;
+    }
+}

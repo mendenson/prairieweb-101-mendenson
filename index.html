@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta 
+        name="description" 
+        content="Explore Alberta's incredible hiking trails in the Canadian Rockies. Discover scenic routes, trail information, and tips for every skill level.">
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap-grid.min.css"
+    >
+    <link rel="stylesheet" href="css/style.css">
+    <title>Alberta Trail Guide</title>
+</head>
+<body>
+    <header class="site-header">
+        <a href="#" class="site-header__brand">
+            Alberta Trail Guide
+        </a>
+        <nav class="site-nav" aria-label="Main navigation">
+            <ul class="site-nav__list">
+                <li><a href="#about">About</a></li>
+                <li><a href="#trails">Trails</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Your next wilderness adventure starts here</h1>
+        <section id="about">
+            <h2>Explore the Wild Heart of Alberta</h2>
+            <p>A curated routes for every skill level—from casual weekend walks to challenging alpine ascents.</p>
+        </section>
+        <section id="trails">
+            <h2>Choose Your Adventure</h2>
+            <div class="container">
+                <div class="row g-4">
+
+                    <div class="col-12 col-md-6">
+                        <article class="trail-card">
+                            <h3>Plain of Six Glaciers</h3>
+                            <p>
+                                An iconic Lake Louise trail that takes you deep into an alpine valley framed by giant glaciers, ending near a historic backcountry tea house.
+                            </p>
+                        </article>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <article class="trail-card">
+                            <h3>Johnston Canyon</h3>
+                            <p>A classic Banff hike following a dramatic limestone canyon with waterfalls before opening up into a serene meadow with bubbling mineral springs.</p>
+                        </article>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <article class="trail-card">
+                            <h3>Ha Ling Peak</h3>
+                            <p>A steep and steady climb above Canmore that rewards hikers with panoramic 360-degree views of the Bow Valley and Mount Rundle.</p>
+                            
+                        </article>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <article class="trail-card">
+                            <h3>Troll Falls</h3>
+                            <p>An easy, family-friendly walk through pine forests leading to a picturesque waterfall tucked in the Kananaskis Valley</p>
+                            
+                        </article>
+                    </div>
+                    <div>
+                        <img src="images/Plain-of-Six-Glaciers.jpg" alt="">
+                        <p>img 1</p>
+                    </div>
+                    <div>
+                        <img src="images/Ha-Ling-Peak.jpg" alt="">
+                        <p>img 2</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form class="contact-form" action="#" method="POST">
+                <div>
+                <label for="full-name">Full Name</label>
+                <input type="text" id="full-name" name="full_name" autocomplete="name" required placeholder="John Doe">
+                </div>
+                <div>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" autocomplete="email" required placeholder="john@example.com">
+                </div>
+                <div>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required placeholder="Write your message here..."></textarea>
+                </div>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+        <section id="faq">
+            <h2>Frequently Asked Questions (FAQ)</h2>
+            <h3>General &amp; Site Info</h3>
+            <details>
+                <summary>Is Alberta Trail Guide free to use?</summary>
+                <p>Yes! Our goal is to make trail information accessible to everyone. All route details, maps, and safety guides on Alberta Trail Guide are 100% free to access.</p>
+            </details>
+        </section>
+    </main>
+    <footer><p>© 2026 Alberta Trail Guide. All rights reserved.</p></footer>
+</body>
+</html>
