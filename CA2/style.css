@@ -1,0 +1,112 @@
+* {
+    box-sizing: border-box;
+}
+
+main {
+    max-width: 650px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 12px;
+}
+
+h1 {
+    color: #245c3b;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    line-height: 1.6;
+}
+
+legend {
+    font-weight: bold;
+    color: #245c3b;
+    padding: 0 8px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 6px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input,
+select,
+textarea {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #879b8b;
+    border-radius: 6px;
+    font: inherit;
+    background-color: white;
+    color: #24362b;
+}
+
+button {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    padding: 14px;
+    background-color: #245c3b;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: #19452c;
+}
+
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid #b26b00;
+    outline-offset: 2px;
+}
+
+[aria-invalid="true"] {
+    border: 2px solid #b42318
+}
+
+#eformMessage {
+    color: #9f261c;
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    main {
+        margin: 15px auto;
+        padding: 18px;
+    }
+
+    fieldset {
+        padding: 12px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    button {
+        transition: none;
+    }
+}

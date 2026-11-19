@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trail Enquiry - Explore Alberta Trails</title>
+    <meta name="description" content="Send a question about beginner-friendly trails.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; object-src 'none'; base-uri 'none'; form-action 'self'">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main id="main">
+        <h1>Trail Enquiry Form</h1>
+        <p>Ask us about beginner-friendly trails in Alberta.</p>
+        <form id="enquiryForm" novalidate>
+            <fieldset>
+                <legend>Your Enquiry Details</legend>
+
+                <label for="fullName">Full Name *</label>
+                <input type="text" id="fullName" name="name" placeholder="Enter your full name" autocomplete="name" required>
+
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" placeholder="example@email.com" autocomplete="email" required>
+
+                <label for="trailLength">Preferred Trail Length</label>
+                <select name="trailLength" id="trailLength">
+                    <option value="">Select a trail length</option>
+                    <option value="short">Short (under 5 km)</option>
+                    <option value="medium">Medium (5-10 km)</option>
+                    <option value="long">Long (over 10 km)</option>
+                </select>
+
+                <label for="message">Message *</label>
+                <textarea name="message" id="message" rows="5" maxlength="500" placeholder="Write your question here..." required></textarea>
+            </fieldset>
+            <p id="formMessage" aria-live="polite"></p>
+            <button type="submit">Send Enquiry</button>
+        </form>
+    </main>
+
+    <script type="module" src="js/script.js"></script>
+</body>
+</html>
