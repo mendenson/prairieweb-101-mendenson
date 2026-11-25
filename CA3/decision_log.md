@@ -28,9 +28,9 @@ CSS and JavaScript were reviewed and minified using esbuild. System fonts with a
 
 The page includes descriptive headings, image alternative text, and metadata.
 
-The metadata includes `charset`, `viewport`, `description`, `author`, `theme-color`, `og:type`, `og:title`, `og:description`, and `og:locale`.
+The metadata includes `charset`, `viewport`, `description`, `author`, `theme-color`, `og:type`, `og:title`, `og:description`, `og:locale`, `og:url`, and `rel="canoninal"`.
 
-A canonical URL remains pending until a permanent public URL is established. No dedicated AI-specific metatag was added.
+The canonical URL was configured using the published GitHub Pages address. I also added `og:url` for social sharing. No dedicated AI-specific metatag was added.
 
 ## Lighthouse Results
 
