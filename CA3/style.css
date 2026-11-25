@@ -38,3 +38,26 @@ body {
     outline: 3px solid #b26b00;
     outline-offset: 3px;
 }
+
+#trail-photo figure {
+    width: 100%;
+    max-width: 900px;
+    margin: 20px auto;
+}
+
+#trail-photo picture {
+    display: block;
+}
+
+#trail-photo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+#trail-photo figcaption {
+    margin-top: 10px;
+    text-align: center;
+    color: #555;
+}

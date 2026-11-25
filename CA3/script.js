@@ -26,7 +26,7 @@ async function loadWeather() {
         });
 
         if (!response.ok) {
-            throw new Error("Wheater API request failed.");
+            throw new Error("Weather API request failed.");
         }
 
         const data = await response.json();
