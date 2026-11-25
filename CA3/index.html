@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Explore Alberta Trails • Interactive Map</title>
+    <meta name="description"
+          content="Find real-time weather and route info for beginner-friendly Alberta trails.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main id="main">
+        <h1>Trailhead Map & Live Weather</h1>
+        <section id="trail-map">
+            <h2>Explore Lake Louise</h2>
+            <p>Discover hiking trails around Lake Louise, Alberta</p>
+
+            <p id="map-notice">
+                This map provided by OpenStreetMap.
+                Loading it way share your IP address and browser information with a third party.
+            </p>
+            <button type="button" id="load-map">
+                Load Interactive Map
+            </button>
+            <div class="map-container" id="map-container" hidden></div>
+            <p id="map-fallback">
+                Map not displaying?
+                <a 
+                    href="https://www.openstreetmap.org/#map=13/51.415/-116.18"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Open the map directly on OpenStreetMap.
+                </a>
+            </p>
+        </section>
+        <section id="weather">
+            <h2>Current Weather in Lake Louise</h2>
+            <p id="weather-status" aria-live="polite">
+                loading weather information...
+            </p>
+            <p id="weather-details"></p>
+        </section>
+    </main>
+    <script type="module" src="script.js"></script>
+</body>
