@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+}
+
+.map-container {
+    width: 100%;
+    max-width: 900px;
+    aspect-ratio: 16 / 9;
+    margin: 20px auto;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+#load-map {
+    padding: 12px 20px;
+    background-color: #205c43;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#load-map:hover {
+    background-color: #164330;
+}
+
+#load-map:focus-visible {
+    outline: 3px solid #b26b00;
+    outline-offset: 3px;
+}
+
+#trail-photo figure {
+    width: 100%;
+    max-width: 900px;
+    margin: 20px auto;
+}
+
+#trail-photo picture {
+    display: block;
+}
+
+#trail-photo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+#trail-photo figcaption {
+    margin-top: 10px;
+    text-align: center;
+    color: #555;
+}

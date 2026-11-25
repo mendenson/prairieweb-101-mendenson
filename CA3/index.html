@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <!-- Social sharing metadata -->
+    <meta property="og:type" content="website">
+    <meta property="og:title"
+      content="Explore Alberta Trails | Interactive Map &amp; Weather">
+    <meta property="og:description"
+        content="Explore Lake Louise hiking trails with an interactive map and current weather information.">
+    <meta property="og:locale" content="en_CA">
+    <meta
+        property="og:url"
+        content="https://mendenson.github.io/prairieweb-101-mendenson/CA3/"
+    >
+
+    <!-- Additional page metadata -->
+    <meta name="author" content="Mendenson Mota">
+    <meta name="theme-color" content="#205c43">
+
+    <title>Explore Alberta Trails • Interactive Map</title>
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <meta name="description"
+          content="Find real-time weather and route info for beginner-friendly Alberta trails.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="canonical" href="https://mendenson.github.io/prairieweb-101-mendenson/CA3/">
+    <link rel="stylesheet" href="style.min.css">
+</head>
+<body>
+    <main id="main">
+        <h1>Trailhead Map & Live Weather</h1>
+        <section id="trail-map">
+            <h2>Explore Lake Louise</h2>
+            <p>Discover hiking trails around Lake Louise, Alberta</p>
+
+            <p id="map-notice">
+                This map is provided by OpenStreetMap.
+                Loading it may share your IP address and browser information with a third party.
+            </p>
+            <button type="button" id="load-map">
+                Load Interactive Map
+            </button>
+            <div class="map-container" id="map-container" hidden></div>
+            <p id="map-fallback">
+                Map not displaying?
+                <a 
+                    href="https://www.openstreetmap.org/#map=13/51.415/-116.18"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Open the map directly on OpenStreetMap.
+                </a>
+            </p>
+        </section>
+        <section id="weather">
+            <h2>Current Weather in Lake Louise</h2>
+            <p id="weather-status" aria-live="polite">
+                loading weather information...
+            </p>
+            <p id="weather-details"></p>
+        </section>
+        <section id="trail-photo">
+            <h2>Discover Plain of Six Glaciers</h2>
+            <figure>
+                <picture>
+                    <source 
+                        type="image/webp"
+                        srcset="
+                            images/Plain-of-Six-Glaciers-600.webp 600w,
+                            images/Plain-of-Six-Glaciers-1000.webp 1000w"
+                        sizes="(max-width: 940px) calc(100vw - 40px), 900px"
+                    >
+                    <img 
+                        src="images/Plain-of-Six-Glaciers.jpg"
+                        alt="Landscape along the Plain of Six Glaciers trail near Lake Louise, Alberta"
+                        width="1400"
+                        height="1050"
+                        loading="lazy"
+                        decoding="async"
+                    >
+                </picture>
+                <figcaption>Plain of Six Glaciers - Lake Louise, ALberta.</figcaption>
+            </figure>
+        </section>
+    </main>
+    <script type="module" src="script.min.js"></script>
+</body>
+</html>
