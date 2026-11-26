@@ -1,0 +1,154 @@
+/* CA4 - Simple styles without Bootstrap */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #243b33;
+}
+
+/* Header */
+.site-header {
+  background-color: #205c43;
+  color: white;
+  padding: 16px 24px;
+}
+
+.site-header h1 {
+  margin: 0;
+  font-size: 26px;
+}
+
+/* Hero image and weather */
+.hero {
+  min-height: 300px;
+  padding: 32px 24px;
+  color: white;
+  background-image:
+    linear-gradient(90deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.12)),
+    url("../images/Plain-of-Six-Glaciers-1000.webp");
+  background-position: center;
+  background-size: cover;
+}
+
+.hero h2 {
+  margin-top: 0;
+  font-size: 26px;
+}
+
+#weather-status {
+  line-height: 1.5;
+}
+
+/* Contact form */
+.contact {
+  width: calc(100% - 32px);
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 32px;
+  background-color: #f7f9f7;
+  border: 1px solid #dce5df;
+  border-radius: 12px;
+}
+
+.contact h2,
+.contact > p {
+  text-align: center;
+}
+
+.contact h2 {
+  margin-top: 0;
+  color: #205c43;
+}
+
+#trailForm {
+  display: grid;
+  gap: 16px;
+}
+
+.form-field label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.form-field input {
+  width: 100%;
+  min-height: 44px;
+  padding: 12px;
+  border: 1px solid #91aa9a;
+  border-radius: 6px;
+  font: inherit;
+}
+
+#trailForm button {
+  min-height: 44px;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: #205c43;
+  color: white;
+  font: inherit;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#trailForm button:hover {
+  background-color: #174832;
+}
+
+#trailForm button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.form-field input:focus-visible,
+#trailForm button:focus-visible {
+  outline: 2px solid #205c43;
+  outline-offset: 2px;
+}
+
+#form-status {
+  margin: 0;
+}
+
+#form-status:empty {
+  display: none;
+}
+
+#trailForm small {
+  color: #526b5b;
+}
+
+.site-footer {
+  padding: 0 16px 24px;
+  text-align: center;
+}
+
+/* Smaller screens */
+@media (max-width: 600px) {
+  .site-header {
+    padding: 16px;
+  }
+
+  .site-header h1 {
+    font-size: 22px;
+  }
+
+  .hero {
+    min-height: 250px;
+    padding: 24px 16px;
+  }
+
+  .hero h2 {
+    font-size: 23px;
+  }
+
+  .contact {
+    margin: 24px auto;
+    padding: 20px;
+  }
+}
