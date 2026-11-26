@@ -18,7 +18,7 @@ The API does not require an API key.
 Repository:
 https://github.com/mendenson/prairieweb-101-mendenson
 
-Expected CA4 website URL:
+CA4 website URL:
 https://mendenson.github.io/prairieweb-101-mendenson/CA4/
 
 The final URL must be verified after deployment.
@@ -66,13 +66,13 @@ After publishing, I will check the website using Chrome or Microsoft Edge.
 
 ### Functionality
 
-- [ ] The website opens correctly.
-- [ ] The hero image loads.
-- [ ] The weather information appears.
-- [ ] The contact form validates the required fields.
-- [ ] The form displays its demonstration message.
-- [ ] There are no JavaScript errors in the Console.
-- [ ] No local CSS, JavaScript, or image requests return 404 errors.
+- [X] The website opens correctly.
+- [X] The hero image loads.
+- [X] The weather information appears.
+- [X] The contact form validates the required fields.
+- [X] The form displays its demonstration message.
+- [X] There are no JavaScript errors in the Console.
+- [X] No local CSS, JavaScript, or image requests return 404 errors.
 
 ### Mobile Responsiveness
 
@@ -91,12 +91,11 @@ I will check that:
 
 ### Security
 
-- [ ] The published website uses HTTPS.
-- [ ] The Weather API uses HTTPS.
-- [ ] There are no mixed-content errors.
-- [ ] The contact form does not create cookies.
-- [ ] Form information is not sent to a server.
-- [ ] There are no passwords or API keys in the code.
+- [X] The Weather API uses HTTPS.
+- [X] There are no mixed-content errors.
+- [X] The contact form does not create cookies.
+- [X] Form information is not sent to a server.
+- [X] There are no passwords or API keys in the code.
 
 ## 5. Browser Caching
 
@@ -149,19 +148,27 @@ This allows me to restore a working version if a deployment fails.
 
 Complete after publishing:
 
-**Deployment date:** [PENDING]
+**Deployment date:**
+November 26, 2026
 
-**Commit SHA:** [PENDING]
+**Commit SHA:**
+3bf905a349741cbdb318e3620d4d8cc39e82d322
 
-**Published website URL:** [PENDING]
+**Published website URL:**
+https://mendenson.github.io/prairieweb-101-mendenson/CA4/
 
 **GitHub repository link:**  
-https://github.com/mendenson/prairieweb-101-mendenson
+https://github.com/mendenson/prairieweb-101-mendenson/
 
-**HTTPS verification:** [PENDING]
+**HTTPS verification:**
+The CA4 website was accessed using HTTPS through GitHub Pages.
+I verified that the Weather API request also uses HTTPS.
+No mixed-content errors were found in the browser Console.
 
-**Mobile testing:** [PENDING]
+**Lighthouse results:**
+[Lighthouse Results](evidence/lighthouse_results.pdf)
 
-**Lighthouse results:** [PENDING]
-
-**Final deployment status:** [PENDING]
+**Final deployment status:**
+The CA4 website was successfully deployed using GitHub Pages.
+The latest deployment workflow completed without errors.
+The website is published from the main branch.
