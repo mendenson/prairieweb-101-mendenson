@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore hiking trails in Alberta and check the weather near Lake Louise.">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+
+  <title>Explore Alberta Trails</title>
+
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+
+
+  <link rel="stylesheet" href="css/style.css?v=20261126-2">
+  <script type="module" src="js/script.js"></script>
+</head>
+
+<body>
+  <header class="site-header">
+    <h1>Explore Alberta Trails</h1>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2>Discover Alberta's Scenic Trails</h2>
+
+      <p id="weather-status" aria-live="polite">
+        Loading weather...
+      </p>
+    </section>
+
+    <section class="contact">
+      <h2>Contact Us</h2>
+      <p>Questions about a trail? Try the form below.</p>
+
+      <!-- This is a demo form. Nothing is sent to a server. -->
+      <form id="trailForm">
+        <div class="form-field">
+          <label for="name">Name</label>
+          <input
+            id="name"
+            name="name"
+            type="text"
+            required
+            maxlength="100"
+            autocomplete="name"
+          >
+        </div>
+
+        <div class="form-field">
+          <label for="email">Email</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            required
+            maxlength="254"
+            autocomplete="email"
+          >
+        </div>
+
+        <!-- JavaScript enables the button after the form is ready. -->
+        <button type="submit" disabled>Send</button>
+
+        <p id="form-status" aria-live="polite"></p>
+
+        <small>Demo only: no message is sent or saved.</small>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Explore Alberta Trails</p>
+  </footer>
+</body>
+</html>
