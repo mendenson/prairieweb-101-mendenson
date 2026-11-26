@@ -187,6 +187,152 @@ textarea:focus-visible {
     border: 2px solid #b42318
 }
 
+/* Interactive Trail Map */
+
+.trail-map-description,
+#trail-map-notice,
+#trail-map > p {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#load-trail-map {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    margin: 20px auto;
+    padding: 12px 20px;
+}
+
+#load-trail-map[hidden] {
+    display: none;
+}
+
+#trail-map-container {
+    width: 100%;
+    max-width: 900px;
+    aspect-ratio: 16 / 9;
+    margin: 20px auto;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+#trail-map-container iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Trail Weather */
+
+.trail-weather {
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: #edf5ef;
+    border: 1px solid #d0e1d4;
+    border-radius: 8px;
+}
+
+.trail-weather h4 {
+    margin: 0 0 0.5rem;
+    color: var(--color-primary);
+}
+
+.trail-weather p {
+    margin: 0;
+}
+
+/* Main contact container */
+#contact {
+    max-width: 760px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    border: 1px solid #dce6df;
+    border-radius: 16px;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.05);
+}
+
+/* Section heading */
+#contact h2 {
+    text-align: center;
+    color: #205c43;
+    margin-bottom: 0.75rem;
+}
+
+/* Introduction */
+#contact > p {
+    text-align: center;
+    color: #5c6b63;
+    margin-bottom: 2rem;
+}
+
+/* Form fieldset */
+#contact fieldset {
+    min-width: 0;
+    margin: 0;
+    padding: 1.5rem;
+    border: 1px solid #dce6df;
+    border-radius: 10px;
+}
+
+/* Fieldset title */
+#contact legend {
+    padding: 0 0.5rem;
+    color: #205c43;
+    font-weight: 600;
+}
+
+/* Form labels */
+#contact label {
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #243b32;
+}
+
+/* Form fields */
+#contact input,
+#contact select,
+#contact textarea {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    border-radius: 8px;
+    padding: 0.85rem 1rem;
+    font: inherit;
+}
+
+/* Message area */
+#contact textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+/* Keyboard focus */
+#contact input:focus-visible,
+#contact select:focus-visible,
+#contact textarea:focus-visible {
+    outline: 2px solid #205c43;
+    outline-offset: 2px;
+}
+
+/* Submit button */
+#contact button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    margin-top: 1.25rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
 @media (min-width: 768px) {
     .site-header {
         flex-direction: row;                         
@@ -207,5 +353,21 @@ textarea:focus-visible {
 
     .trail-card h3 {
         font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    #contact {
+        margin: 1.5rem 0.75rem;
+        padding: 1.25rem;
+        border-radius: 12px;
+    }
+
+    #contact fieldset {
+        padding: 1rem;
+    }
+
+    #contact textarea {
+        min-height: 120px;
     }
 }

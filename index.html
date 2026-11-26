@@ -1,17 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Basic Metadata -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta 
-        name="description" 
-        content="Explore Alberta's incredible hiking trails in the Canadian Rockies. Discover scenic routes, trail information, and tips for every skill level.">
-    <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap-grid.min.css"
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
     >
-    <link rel="stylesheet" href="css/style.css">
+
     <title>Alberta Trail Guide</title>
+
+    <meta
+        name="description"
+        content="Explore Alberta's incredible hiking trails in the Canadian Rockies. Discover scenic routes, trail information, and tips for every skill level."
+    >
+
+    <!-- Website Favicon -->
+    <link
+        rel="icon"
+        type="image/svg+xml"
+        href="images/favicon.svg"
+    >
+
+    <!-- Canonical URL -->
+    <link
+        rel="canonical"
+        href="https://mendenson.github.io/prairieweb-101-mendenson/"
+    >
+
+    <!-- Open Graph Metadata -->
+    <meta property="og:type" content="website">
+
+    <meta
+        property="og:title"
+        content="Alberta Trail Guide"
+    >
+
+    <meta
+        property="og:description"
+        content="Explore hiking trails in the Canadian Rockies with interactive maps, weather information, and scenic trail guides."
+    >
+
+    <meta
+        property="og:url"
+        content="https://mendenson.github.io/prairieweb-101-mendenson/"
+    >
+
+    <meta property="og:locale" content="en_CA">
+
+    <!-- Additional Metadata -->
+    <meta name="author" content="Mendenson Mota">
+    <meta name="theme-color" content="#205c43">
+
+    <!-- Stylesheets -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap-grid.min.css"
+    >
+
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header class="site-header">
@@ -40,67 +88,190 @@
 
                     <div class="col-12 col-md-6">
                         <article class="trail-card">
-                            <img src="images/Plain-of-Six-Glaciers.jpg" class="trail-card__image">
+                            <picture>
+                                <source
+                                    type="image/webp"
+                                    srcset="
+                                        images/Plain-of-Six-Glaciers-600.webp 600w,
+                                        images/Plain-of-Six-Glaciers-1000.webp 1000w"
+                                    sizes="(min-width: 1200px) 520px,
+                                        (min-width: 768px) 45vw,
+                                        90vw"
+                                >
+
+                                <img
+                                    src="images/Plain-of-Six-Glaciers.jpg"
+                                    class="trail-card__image"
+                                    alt="Hiking trail surrounded by mountains and glaciers near Lake Louise, Alberta"
+                                    width="1400"
+                                    height="1050"
+                                    loading="lazy"
+                                    decoding="async"
+                                >
+                            </picture>
                             <h3>Plain of Six Glaciers</h3>
                             <p>
                                 An iconic Lake Louise trail that takes you deep into an alpine valley framed by giant glaciers, ending near a historic backcountry tea house.
                             </p>
+                            <div class="trail-weather">
+                                <h4>Weather near Lake Louise</h4>
+
+                                <p id="weather-lake-louise" aria-live="polite">
+                                    Loading weather information...
+                                </p>
+                            </div>
                         </article>
                     </div>
                     <div class="col-12 col-md-6">
                         <article class="trail-card">
-                            <img src="images/Johnston-Canyon.jpg" class="trail-card__image">
+                            <picture>
+                                <source
+                                    type="image/webp"
+                                    srcset="
+                                        images/Johnston-Canyon-600.webp 600w,
+                                        images/Johnston-Canyon-1000.webp 1000w"
+                                    sizes="(min-width: 1200px) 520px,
+                                        (min-width: 768px) 45vw,
+                                        90vw"
+                                >
+
+                                <img
+                                    src="images/Johnston-Canyon.jpg"
+                                    class="trail-card__image"
+                                    alt="Waterfall and elevated walking path through Johnston Canyon in Banff National Park"
+                                    width="900"
+                                    height="675"
+                                    loading="lazy"
+                                    decoding="async"
+                                >
+                            </picture>
                             <h3>Johnston Canyon</h3>
                             <p>A classic Banff hike following a dramatic limestone canyon with waterfalls before opening up into a serene meadow with bubbling mineral springs.</p>
+                            <div class="trail-weather">
+                                <h4>Weather near Johnston Canyon</h4>
+
+                                <p id="weather-johnston-canyon" aria-live="polite">
+                                    Loading weather information...
+                                </p>
+                            </div>
                         </article>
                     </div>
                     <div class="col-12 col-md-6">
                         <article class="trail-card">
-                            <img src="images/Ha-Ling-Peak.jpg" class="trail-card__image">
+                            <picture>
+                                <source
+                                    type="image/webp"
+                                    srcset="
+                                        images/Ha-Ling-Peak-600.webp 600w,
+                                        images/Ha-Ling-Peak-1000.webp 1000w"
+                                    sizes="(min-width: 1200px) 520px,
+                                        (min-width: 768px) 45vw,
+                                        90vw"
+                                >
+
+                                <img
+                                    src="images/Ha-Ling-Peak.jpg"
+                                    class="trail-card__image"
+                                    alt="Hiker on a mountain trail near Ha Ling Peak in Canmore, Alberta"
+                                    width="700"
+                                    height="525"
+                                    loading="lazy"
+                                    decoding="async"
+                                >
+                            </picture>
                             <h3>Ha Ling Peak</h3>
                             <p>A steep and steady climb above Canmore that rewards hikers with panoramic 360-degree views of the Bow Valley and Mount Rundle.</p>
-                            
+                            <div class="trail-weather">
+                                <h4>Weather near Ha Ling Peak</h4>
+
+                                <p id="weather-ha-ling" aria-live="polite">
+                                    Loading weather information...
+                                </p>
+                            </div>
                         </article>
                     </div>
                     <div class="col-12 col-md-6">
                         <article class="trail-card">
-                            <img src="images/Troll-Falls.jpg" class="trail-card__image">
+                            <picture>
+                                <source
+                                    type="image/webp"
+                                    srcset="
+                                        images/Troll-Falls-600.webp 600w,
+                                        images/Troll-Falls-1000.webp 1000w"
+                                    sizes="(min-width: 1200px) 520px,
+                                        (min-width: 768px) 45vw,
+                                        90vw"
+                                >
+
+                                <img
+                                    src="images/Troll-Falls.jpg"
+                                    class="trail-card__image"
+                                    alt="Waterfall surrounded by rocky cliffs and forest at Troll Falls in Kananaskis, Alberta"
+                                    width="2048"
+                                    height="1536"
+                                    loading="lazy"
+                                    decoding="async"
+                                >
+                            </picture>
                             <h3>Troll Falls</h3>
                             <p>An easy, family-friendly walk through pine forests leading to a picturesque waterfall tucked in the Kananaskis Valley</p>
-                            
+                            <div class="trail-weather">
+                                <h4>Weather near Troll Falls</h4>
+
+                                <p id="weather-troll-falls" aria-live="polite">
+                                    Loading weather information...
+                                </p>
+                            </div>
                         </article>
                     </div>
                     
                 </div>
             </div>
         </section>
+        <section id="trail-map">
+            <h2>Explore Alberta Trail Locations</h2>
+            <p class="trail-map-description">
+                Discover the Lake Louise area on an interactive map.
+            </p>
+            <p id="trail-map-notice">
+                This map is provided by OpenStreetMap. Loading it may share your IP address and browser information with a third party.
+            </p>
+            <button type="button" id="load-trail-map">Load Interactive Map</button>
+            <div id="trail-map-container" hidden></div>
+            <p>
+                Map not displaying?
+                <a href="https://www.openstreetmap.org/#map=13/51.415/-116.18" target="_blank" rel="noopener noreferrer">
+                    Open the map on OpenStreetMap.
+                </a>
+            </p>
+        </section>
         <section id="contact">
             <h2>Contact Us</h2>
             <p>Ask us about beginner-friendly trails in Alberta.</p>
-        <form id="enquiryForm" novalidate>
-            <fieldset>
-                <legend>Your Enquiry Details</legend>
+            <form id="enquiryForm" novalidate>
+                <fieldset>
+                    <legend>Your Enquiry Details</legend>
 
-                <label for="fullName">Full Name *</label>
-                <input type="text" id="fullName" name="name" placeholder="Enter your full name" autocomplete="name" required>
+                    <label for="fullName">Full Name *</label>
+                    <input type="text" id="fullName" name="name" placeholder="Enter your full name" autocomplete="name" required>
 
-                <label for="email">Email Address *</label>
-                <input type="email" id="email" name="email" placeholder="example@email.com" autocomplete="email" required>
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" placeholder="example@email.com" autocomplete="email" required>
 
-                <label for="trailLength">Preferred Trail Length</label>
-                <select name="trailLength" id="trailLength">
-                    <option value="">Select a trail length</option>
-                    <option value="short">Short (under 5 km)</option>
-                    <option value="medium">Medium (5-10 km)</option>
-                    <option value="long">Long (over 10 km)</option>
-                </select>
+                    <label for="trailLength">Preferred Trail Length</label>
+                    <select name="trailLength" id="trailLength">
+                        <option value="">Select a trail length</option>
+                        <option value="short">Short (under 5 km)</option>
+                        <option value="medium">Medium (5-10 km)</option>
+                        <option value="long">Long (over 10 km)</option>
+                    </select>
 
-                <label for="message">Message *</label>
-                <textarea name="message" id="message" rows="5" maxlength="500" placeholder="Write your question here..." required></textarea>
-            </fieldset>
-            <p id="formMessage" aria-live="polite"></p>
-            <button type="submit">Send Enquiry</button>
-        </form>
+                    <label for="message">Message *</label>
+                    <textarea name="message" id="message" rows="5" maxlength="500" placeholder="Write your question here..." required></textarea>
+                </fieldset>
+                <p id="formMessage" aria-live="polite"></p>
+                <button type="submit">Send Enquiry</button>
+            </form>
         </section>
         <section id="faq">
             <h2>Frequently Asked Questions (FAQ)</h2>
